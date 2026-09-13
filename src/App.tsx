@@ -20,7 +20,7 @@ function App() {
         <Nav></Nav>
         <Banner></Banner>
 
-       <div className="flex-1">
+       <div>
           <Suspense fallback={<h2>Loading...</h2>}>
             <Technology technoPromise={technoPromise}></Technology>
           </Suspense>

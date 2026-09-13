@@ -7,10 +7,12 @@ interface TechnologyCardProps {
     onAddToStack: (technology: TypeTechnology) => void;
 }
 
-const TechnologyCard = ({technologies, onAddToStack}): TechnologyCardProps => {
-    // console.log(technologies, 'Technology from Technology Card')
+const TechnologyCard = ({
+    technologies, 
+    onAddToStack,
+}: TechnologyCardProps)  => {
     return (
-        <div className="grid grid-cols-3 gap-5 my-9 mx-8 p-5 h-69.25">
+        <div className="grid grid-cols-3 gap-5 my-9 mx-8 p-5">
             {technologies.map((technology) => {
                 return <TechCard key={technology.id}technology={technology}
                 onAddToStack={onAddToStack}></TechCard>
