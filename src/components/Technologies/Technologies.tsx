@@ -14,14 +14,14 @@ const Technology = ({ technoPromise }: TechnologiesProps) => {
     const [selectedTechnologies, setSelectedTechnologies] = useState<TypeTechnology[]>([]);
 
     const handleAddToStack = (technology: TypeTechnology) => {
-       setSelectedTechnologies((prev) =>{ 
+        setSelectedTechnologies((prev) => {
 
-        const alreadyExists = prev.some((item) => item.id === technology.id);
-        if(alreadyExists) {
-            return prev;
-        }
-        return[...prev, technology];
-       });
+            const alreadyExists = prev.some((item) => item.id === technology.id);
+            if (alreadyExists) {
+                return prev;
+            }
+            return [...prev, technology];
+        });
     }
 
 
@@ -70,7 +70,9 @@ const Technology = ({ technoPromise }: TechnologiesProps) => {
                 </div>
 
             </div>
+
         </div>
+
     );
 };
 
