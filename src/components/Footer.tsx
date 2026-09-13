@@ -3,8 +3,8 @@ import FooterLogo from '../assets/logo-text.png';
 const Footer = () => {
     return (
         <>
-            <div className='mt-16 mb-12
-        mx-18 px-8'>
+            <div className='mt-16 mb-12 mx-5 
+        md:mx-18 px-5 md:px-8'>
                 <div className='flex justify-between pb-12'>
                     <div>
                         <img src={FooterLogo} className='mb-3 ' alt="" />
