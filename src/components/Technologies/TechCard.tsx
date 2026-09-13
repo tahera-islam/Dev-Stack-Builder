@@ -1,9 +1,12 @@
 
 import type { TypeTechnology } from '../../Type/technologyType';
 
-int
+interface TechCardProps {
+    technology: TypeTechnology;
+    onAddToStack: (technology: TypeTechnology) => void;
+}
 
-const TechCard = ({technology}:{technology:TypeTechnology}) => {
+const TechCard = ({technology, onAddToStack }: TechCardProps) => {
     return (
         <div className="w-full max-w-67.5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
 

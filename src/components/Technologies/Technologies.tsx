@@ -40,7 +40,7 @@ const Technology = ({ technoPromise }: TechnologiesProps) => {
 
     return (
         <div className='container mx-auto'>
-            <div>
+            <div className='container mx-auto'>
                 <h3 className='font-extrabold text-4xl leading-10 text-[#0F172A]'>Explore the <span className='bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent'>Technologies</span></h3>
 
                 <p className='leading-6 text-[#64748B]font-[Plus_Jakarta_Sans]'>Pick one technology per category to build your stack.</p>

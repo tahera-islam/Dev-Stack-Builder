@@ -1,8 +1,15 @@
 import React from 'react';
+import type { TypeTechnology } from '../../Type/technologyType';
 
-const YourStack = () => {
+interface YourStackProps {
+    technologies: TypeTechnology[];
+    onRemoveFromStack: (id: number) => void;
+    onRemoveAll: () => void;
+}
+
+const YourStack = ({technologies, onRemoveFromStack, onRemoveAll}:YourStackProps) => {
     return (
-        <div className="w-full max-w-[270px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+        <div className="w-full max-w-67.5 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
 
             {/* Header */}
             <div>
@@ -20,7 +27,7 @@ const YourStack = () => {
 
             {/* Empty State */}
             {technologies.length === 0 && (
-                <div className="mt-4 flex h-[66px] items-center justify-center rounded-xl border border-dashed border-slate-200">
+                <div className="mt-4 flex h-16.5 items-center justify-center rounded-xl border border-dashed border-slate-200">
                     <p className="text-[11px] text-slate-400">
                         Your stack is empty.
                     </p>
@@ -55,7 +62,7 @@ const YourStack = () => {
 
                             {/* Remove Button */}
                             <button
-                                type="button"
+                                type="button" onClick={() => onRemoveFromStack(technology.id)}
                                 className="text-sm text-slate-400 transition-colors hover:text-slate-700"
                             >
                                 ×
@@ -70,7 +77,7 @@ const YourStack = () => {
             {/* Remove All */}
             {technologies.length > 0 && (
                 <button
-                    type="button"
+                    type="button" onClick={onRemoveAll}
                     className="mt-4 w-full rounded-md border border-red-200 px-3 py-2 text-[10px] font-medium text-red-500 transition-colors hover:bg-red-50"
                 >
                     Remove All
